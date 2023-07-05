@@ -28,6 +28,7 @@
 
 body {
 	background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -38,8 +39,9 @@ body * {
 #container {
 	height: full;
 	padding: 3.5rem 1.5rem;
-	width: 25rem;
+	width: 100%;
 	margin: auto;
+  max-width: 25rem;
 }
 
 #profile {
@@ -52,6 +54,7 @@ body * {
 	border: 5px solid var(--stroke-color);
 	width: 7rem;
   height: 7rem;
+ 
   
 }
 
@@ -148,4 +151,14 @@ footer {
 	padding: 1.5rem;
 	font-size: 0.875rem;
 	text-align: center;
+}
+
+@media (max-width: 700px) {
+  :root{
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light{
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
